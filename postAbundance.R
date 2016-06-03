@@ -48,10 +48,17 @@ dev.off()
 # what level were reads classified to?
 levels_colors=rainbow(8)
 names(levels_colors) = c('domain', 'kingdom','phylum','class','order','family','genus','species')
+levels_order = c('domain', 'kingdom','phylum','class','order','family','genus','species')
+#count reads by classification level:
 cLevelTable = apply(pA, 2, function(x){tapply(x, FUN=sum, I=Level)})
-b = barplot(cLevelTable, col=levels_colors[rownames(cLevelTable)], xaxt='n', main='Reads per classification level')
-text(b, par("usr")[3], labels = colnames(pA), srt = 45, xpd = TRUE, cex=.6, adj=1)
-legend('topleft', col=levels_colors[rownames(cLevelTable)], legend=rownames(cLevelTable), pch=20, cex=1)
+#order table rows by classification level:
+cLevelTable = cLevelTable[order(match(rownames(cLevelTable), levels_order), decreasing=T),]
+pdf(file="Reads_per_classification_level.pdf", width=8 + .1*ncol(pA), height=8)
+    b = barplot(cLevelTable, col=levels_colors[rownames(cLevelTable)], xaxt='n', main='Reads per classification level')
+    text(b, par("usr")[3], labels = colnames(pA), srt = 45, xpd = TRUE, cex=.6, adj=1)
+    legend('topleft', col=levels_colors[rev(rownames(cLevelTable))], legend=rev(rownames(cLevelTable)), pch=20, cex=1)
+dev.off()
+
 
 heatmap.2(pAprop[rare.idx,], trace='none', margins=c(8,8))
 
