@@ -26,7 +26,7 @@ rare.idx = rowSums(pAprop > .01) > (ncol(pAprop) * .01)
 metadata = data.frame(samples=colnames(pAmat),
                       group1=sample(c('a','b','c'), size=ncol(pAmat), replace=T),
                       group2=sample(c(1,2,3), size=ncol(pAmat), replace=T),
-                      group3=sample(c('tissue1','tissue2','tissue3'), size=ncol(pAmat), replace=T)
+                      group3=sample(c('tissue1','tissue2','tissue3','tissue4','tissue5'), size=ncol(pAmat), replace=T)
                       )
 
 
@@ -60,14 +60,31 @@ pdf(file="Reads_per_classification_level.pdf", width=8 + .1*ncol(pA), height=8)
 dev.off()
 
 
-heatmap.2(pAprop[rare.idx,], trace='none', margins=c(8,8))
-
 Figure 2)
     Stacked barplot for community composition
     -using colors for species
 
 Figure 3)
     Stacked barplot for subset of common species
+
+# Figure N)
+# hclust for community membership based on percentages
+mdcolors = data.frame(colorRampPalette(c('blue','red'))(length(unique(metadata$group1)))[metadata$group1],
+                 colorRampPalette(c('green','yellow'))(length(unique(metadata$group1)))[metadata$group2],
+                 colorRampPalette(c('purple','pink'))(length(unique(metadata$group1)))[metadata$group3])
+
+colnames(mdcolors) = colnames(metadata)[2:4]
+
+
+pdf(file="Hierarchical_clustering_proportions_wards_euclidean.pdf", width=8 + .1*ncol(pA), height=8)
+    par(mar=c(1,6, 6, .5))
+    layout(matrix(c(1,2), nrow=2), heights=c(20,6))
+    hc = hclust(dist(t(pAprop)), method='ward.D2')
+    plot(hc, main=paste("Hierarchical clustering using Ward's agglomeration and euclidean distances with proportional values"),
+        xlab='', ylab='')
+    par(mar=c(1,6,0, .5))
+    plotColorUnderTree(hc, colors=mdcolors)
+dev.off()
 
 Figure 4)
     MDS-scaling 2d plot of clusters colored by Grouping Factor 1, with pcr controlled by grouping factor 2
