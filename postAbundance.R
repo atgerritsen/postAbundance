@@ -67,8 +67,9 @@ Figure 2)
 Figure 3)
     Stacked barplot for subset of common species
 
+
 # Figure N)
-# hclust for community membership based on percentages
+# hclust for community membership based on unfiltered percentages
 mdcolors = data.frame(colorRampPalette(c('blue','red'))(length(unique(metadata$group1)))[metadata$group1],
                  colorRampPalette(c('green','yellow'))(length(unique(metadata$group1)))[metadata$group2],
                  colorRampPalette(c('purple','pink'))(length(unique(metadata$group1)))[metadata$group3])
@@ -86,8 +87,27 @@ pdf(file="Hierarchical_clustering_proportions_wards_euclidean.pdf", width=8 + .1
     plotColorUnderTree(hc, colors=mdcolors)
 dev.off()
 
-Figure 4)
-    MDS-scaling 2d plot of clusters colored by Grouping Factor 1, with pcr controlled by grouping factor 2
+
+
+# Figure N+1)  MDS-scaling 2d plot of clusters colored by Grouping Factor 1, with pcr controlled by grouping factor 2
+loc = cmdscale(dist(t(pAprop)), k=3)
+x = loc[,1]
+y = loc[,2]
+z = loc[,3]
+pdf(file="Metric_mds_scaling_2d_euclidean.pdf", width=8, height=8)
+  plot(x,y, type='p', xlab='', ylab='', asp=1, axes=F, main="Metric Multidimensional Scaling plot", pch=20, col=mdcolors[,1],
+    xlim=range(x) * 1.2, ylim=range(y) * 1.01)
+  text(x,y, rownames(loc), cex=0.4, adj=1.1)
+  legend('topright', col=unique(mdcolors[,1]), legend=unique(metadata$group1), pch=20)
+dev.off()
+
+## Make an interactive 3d model in a web page:
+library(rgl)
+plot3d(x, y, z, col=mdcolors[,1], radius=.01, type='s')
+
+filename <- writeWebGL(dir = file.path('./', "webGL"), 
+                       width = 2000, reuse = TRUE)
+######
 
 
 Figure 5)
