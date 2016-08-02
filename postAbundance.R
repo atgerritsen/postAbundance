@@ -33,7 +33,6 @@ treatment <- FecalMeta.2014$Treatment
 #                       )
 
 
-
 #---Come up with unique colors per species/classification level.
 
 #-Create subsets for level of classification.
@@ -62,13 +61,13 @@ pdf(file="Reads_per_classification_level.pdf", width=8 + .1*ncol(pA), height=8)
     legend('topleft', col=levels_colors[rev(rownames(cLevelTable))], legend=rev(rownames(cLevelTable)), pch=20, cex=1)
 dev.off()
 
+# Might be more useful to 
+# Figure 2)
+#     Stacked barplot for community composition
+#     -using colors for species
 
-Figure 2)
-    Stacked barplot for community composition
-    -using colors for species
-
-Figure 3)
-    Stacked barplot for subset of common species
+# Figure 3)
+#     Stacked barplot for subset of common species
 
 
 # Figure N)
@@ -111,16 +110,16 @@ filename <- writeWebGL(dir = file.path('./', "webGL"),
 ######
 
 
-Figure 5)
-    -Hclust with up to 3 factors as bars underneath
+# Figure 5)
+#     -Hclust with up to 3 factors as bars underneath
 
-Figure 6-
-Metrics:
-    -Shannon diversity  -- maybe a barplot with bars colored by grouping factor, ordered by diversity?
-    -etc
+# Figure 6-
+# Metrics:
+#     -Shannon diversity  -- maybe a barplot with bars colored by grouping factor, ordered by diversity?
+#     -etc
 
-Protocol for comparing composition of two groups?
+# Protocol for comparing composition of two groups?
 
 
-Figure N)
-    -Time course type plot by subject.
+# Figure N)
+#     -Time course type plot by subject.
