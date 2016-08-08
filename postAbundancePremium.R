@@ -36,30 +36,6 @@ tissueOrigin <- FecalMeta.2014$Tissue
 
 #-Create subsets for level of classification.
 
-
-#Figure 1)
-pdf(file="Reads_per_sample.pdf", width=8 + .1*ncol(pA), height=8)
-    b = barplot(colSums(pA), xaxt='n', main="Reads per sample")
-    #axis(side=1, at=b, labels=F)
-    text(b, par("usr")[3], labels = colnames(pA), srt = 45, xpd = TRUE, cex=.6, adj=1)
-dev.off()
-
-
-#Figure 2)
-# what level were reads classified to?
-levels_colors=rainbow(8)
-names(levels_colors) = c('domain', 'kingdom','phylum','class','order','family','genus','species')
-levels_order = c('domain', 'kingdom','phylum','class','order','family','genus','species')
-#count reads by classification level:
-cLevelTable = apply(pA, 2, function(x){tapply(x, FUN=sum, I=Level)})
-#order table rows by classification level:
-cLevelTable = cLevelTable[order(match(rownames(cLevelTable), levels_order), decreasing=T),]
-pdf(file="Reads_per_classification_level.pdf", width=8 + .1*ncol(pA), height=8)
-    b = barplot(cLevelTable, col=levels_colors[rownames(cLevelTable)], xaxt='n', main='Reads per classification level')
-    text(b, par("usr")[3], labels = colnames(pA), srt = 45, xpd = TRUE, cex=.6, adj=1)
-    legend('topleft', col=levels_colors[rev(rownames(cLevelTable))], legend=rev(rownames(cLevelTable)), pch=20, cex=1)
-dev.off()
-
 # Might be more useful to 
 # Figure 2)
 #     Stacked barplot for community composition
@@ -67,7 +43,6 @@ dev.off()
 
 # Figure 3)
 #     Stacked barplot for subset of common species
-
 
 # Figure N)
 # hclust for community membership based on unfiltered percentages
