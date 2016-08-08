@@ -1,156 +1,156 @@
-Taxon_Name,Treatment
-1MB_8,1
-1MB_Cec,1
-1MB_Col,1
-1MN_8,1
-1MR_Cec,1
-1MR_Col,1
-1MR_Stom,1
-2MB_8,2
-2MN_8,2
-2MN_Cec,2
-2MN_Col,2
-2MR_8,2
-2MR_Cec,2
-2MR_Col,2
-3MB_8,1
-3MB_Cec,1
-3MB_Col,1
-3MB_Duo,1
-3MN_8,1
-3MN_Cec_soup,1
-3MR_8,1
-3MR_Cec,1
-3MR_Col,1
-41MN_6,1
-41MN_Cec,1
-41MN_Col,1
-41MN_Stom,1
-42MB_Cec,2
-42MB_Col,2
-42MB_Duo,2
-42MB_Stom,2
-43MB_Stom,1
-45FB_6wk,1
-4MB_8,2
-4MB_Cec,2
-4MB_Col,2
-4MB_Col_cont,2
-4MB_Duo,2
-4MN_8,2
-4MN_8w,2
-4MN_Cec,2
-4MN_Col,2
-4MN_Stom,2
-4MR_8,2
-5FB_8,1
-5FB_Cec,1
-5FB_Col,1
-5FN_8,1
-5FR_8,1
-5FR_Cec,1
-5FR_Col,1
-5FR_Stom,1
-6FR_8,2
-6FR_Cec,2
-6FR_Col,2
-6FR_Stom,2
-71MB_0,1
-71MB_12,1
-71MB_16,1
-71MB_1_,1
-71MB_2,1
-71MB_20,1
-71MB_4,1
-71MB_8,1
-71MB_Cec,1
-71MB_Col,1
-71MB_Stom,1
-71MN_0,1
-71MN_12,1
-71MN_16,1
-71MN_1_,1
-71MN_2,1
-71MN_20,1
-71MN_4,1
-71MN_8,1
-71MN_Cec,1
-71MN_Col,1
-71MN_Duo,1
-71MN_Stom,1
-71MR_0,1
-71MR_12,1
-71MR_16,1
-71MR_1_,1
-71MR_2,1
-71MR_20,1
-71MR_4,1
-71MR_8,1
-71MR_Cec,1
-72MB_0,2
-72MB_12,2
-72MB_16,2
-72MB_1_,2
-72MB_20,2
-72MB_4,2
-72MB_8,2
-72MB_Cec,2
-72MB_Col,2
-72MB_Duo,2
-72MB_Stom,2
-72MG_0,2
-72MG_1,2
-72MG_12,2
-72MG_16,2
-72MG_2,2
-72MG_20,2
-72MG_4,2
-72MG_8,2
-72MG_Cec,2
-72MN_0,2
-72MN_12,2
-72MN_16,2
-72MN_1_,2
-72MN_2,2
-72MN_20,2
-72MN_4,2
-72MN_8,2
-72MR_0,2
-72MR_1,2
-72MR_12,2
-72MR_16,2
-72MR_2,2
-72MR_20,2
-72MR_4,2
-72MR_8,2
-72MR_Col,2
-72MR_Duo,2
-72MR_Stom,2
-75MR_8,1
-76MB_8,2
-76MN_8,2
-76MR_8,2
-76MR_8w,2
-77FB_8,1
-77FB_8w,1
-77FN_8,1
-77FN_8w,1
-77FR_8,1
-78FN_8,2
-78FR_8,2
-7FN_8,1
-7FN_Cec,1
-7FN_Col,1
-7FN_Duo,1
-7FN_Stom,1
-7FR_8,1
-7FR_8w,1
-7FR_Col,1
-7FR_Duo,1
-7FR_Stom,1
-8FB_8,2
-8FB_Cec,2
-8FB_Stom,2
-8FR_8,2
-8FR_Cec,2
-8FR_Cec_soup,2
+Taxon_Name	Treatment	Tissue
+1MB_8	1	none
+1MB_Cec	1	cec
+1MB_Col	1	col
+1MN_8	1	none
+1MR_Cec	1	cec
+1MR_Col	1	col
+1MR_Stom	1	stom
+2MB_8	2	none
+2MN_8	2	none
+2MN_Cec	2	cec
+2MN_Col	2	col
+2MR_8	2	none
+2MR_Cec	2	cec
+2MR_Col	2	col
+3MB_8	1	none
+3MB_Cec	1	cec
+3MB_Col	1	col
+3MB_Duo	1	duo
+3MN_8	1	none
+3MN_Cec_soup	1	cec
+3MR_8	1	none
+3MR_Cec	1	cec
+3MR_Col	1	col
+41MN_6	1	none
+41MN_Cec	1	cec
+41MN_Col	1	col
+41MN_Stom	1	stom
+42MB_Cec	2	cec
+42MB_Col	2	col
+42MB_Duo	2	duo
+42MB_Stom	2	stom
+43MB_Stom	1	stom
+45FB_6wk	1	none
+4MB_8	2	none
+4MB_Cec	2	cec
+4MB_Col	2	col
+4MB_Col_cont	2	col
+4MB_Duo	2	duo
+4MN_8	2	none
+4MN_8w	2	none
+4MN_Cec	2	cec
+4MN_Col	2	col
+4MN_Stom	2	stom
+4MR_8	2	none
+5FB_8	1	none
+5FB_Cec	1	cec
+5FB_Col	1	col
+5FN_8	1	none
+5FR_8	1	none
+5FR_Cec	1	cec
+5FR_Col	1	col
+5FR_Stom	1	stom
+6FR_8	2	none
+6FR_Cec	2	cec
+6FR_Col	2	col
+6FR_Stom	2	stom
+71MB_0	1	none
+71MB_12	1	none
+71MB_16	1	none
+71MB_1_	1	none
+71MB_2	1	none
+71MB_20	1	none
+71MB_4	1	none
+71MB_8	1	none
+71MB_Cec	1	cec
+71MB_Col	1	col
+71MB_Stom	1	stom
+71MN_0	1	none
+71MN_12	1	none
+71MN_16	1	none
+71MN_1_	1	none
+71MN_2	1	none
+71MN_20	1	none
+71MN_4	1	none
+71MN_8	1	none
+71MN_Cec	1	cec
+71MN_Col	1	col
+71MN_Duo	1	duo
+71MN_Stom	1	stom
+71MR_0	1	none
+71MR_12	1	none
+71MR_16	1	none
+71MR_1_	1	none
+71MR_2	1	none
+71MR_20	1	none
+71MR_4	1	none
+71MR_8	1	none
+71MR_Cec	1	cec
+72MB_0	2	none
+72MB_12	2	none
+72MB_16	2	none
+72MB_1_	2	none
+72MB_20	2	none
+72MB_4	2	none
+72MB_8	2	none
+72MB_Cec	2	cec
+72MB_Col	2	col
+72MB_Duo	2	duo
+72MB_Stom	2	stom
+72MG_0	2	none
+72MG_1	2	none
+72MG_12	2	none
+72MG_16	2	none
+72MG_2	2	none
+72MG_20	2	none
+72MG_4	2	none
+72MG_8	2	none
+72MG_Cec	2	cec
+72MN_0	2	none
+72MN_12	2	none
+72MN_16	2	none
+72MN_1_	2	none
+72MN_2	2	none
+72MN_20	2	none
+72MN_4	2	none
+72MN_8	2	none
+72MR_0	2	none
+72MR_1	2	none
+72MR_12	2	none
+72MR_16	2	none
+72MR_2	2	none
+72MR_20	2	none
+72MR_4	2	none
+72MR_8	2	none
+72MR_Col	2	col
+72MR_Duo	2	duo
+72MR_Stom	2	stom
+75MR_8	1	none
+76MB_8	2	none
+76MN_8	2	none
+76MR_8	2	none
+76MR_8w	2	none
+77FB_8	1	none
+77FB_8w	1	none
+77FN_8	1	none
+77FN_8w	1	none
+77FR_8	1	none
+78FN_8	2	none
+78FR_8	2	none
+7FN_8	1	none
+7FN_Cec	1	cec
+7FN_Col	1	col
+7FN_Duo	1	duo
+7FN_Stom	1	stom
+7FR_8	1	none
+7FR_8w	1	none
+7FR_Col	1	col
+7FR_Duo	1	duo
+7FR_Stom	1	stom
+8FB_8	2	none
+8FB_Cec	2	cec
+8FB_Stom	2	stom
+8FR_8	2	none
+8FR_Cec	2	cec
+8FR_Cec_soup	2	cec

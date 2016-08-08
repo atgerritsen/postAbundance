@@ -19,6 +19,19 @@ pAprop = t(t(pAmat)/colSums(pAmat))
 # build a filter which removes bacteria which are at < 1% in 1% or less of samples:
 rare.idx = rowSums(pAprop > .01) > (ncol(pAprop) * .01)
 
+# read in metadata groupings
+FecalMeta.2014 <- read.csv("./testData/FecalMeta.2014.csv", header=T, sep='\t')
+FecalMeta.2014$Taxon_Name <- sub("^", "X", FecalMeta.2014$Taxon_Name)
+foodTreatment <- FecalMeta.2014$Treatment
+tissueOrigin <- FecalMeta.2014$Tissue
+
+# metadata = data.frame(samples=colnames(pAmat),
+#                       group1=sample(c('a','b','c'), size=ncol(pAmat), replace=T),
+#                       group2=sample(c(1,2,3), size=ncol(pAmat), replace=T),
+#                       group3=sample(c('tissue1','tissue2','tissue3','tissue4','tissue5'), size=ncol(pAmat), replace=T)
+#                       )
+
+
 #---Come up with unique colors per species/classification level.
 
 #-Create subsets for level of classification.
