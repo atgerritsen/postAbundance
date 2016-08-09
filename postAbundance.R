@@ -3,7 +3,7 @@
 # install.packages("WGCNA")
 
 library(gplots)
-# library(WGCNA)
+library(vegan)
 library(RColorBrewer)
 
 ## Read data and set it up for plotting
@@ -22,7 +22,7 @@ rare.idx = rowSums(pAprop > .01) > (ncol(pAprop) * .01)
 #---Come up with unique colors per species/classification level.
 
 # Figure 1 - Reads per sample, with samples < 10000 reads higlighted
-pdf(file="Data Summaries", width=8 + .1*ncol(pA), height=11)
+pdf(file="Data Summaries.pdf", width=8 + .1*ncol(pA), height=11)
     smallSums <- colSums(pA) >= 10000
     cols <- c("yellow", "forestgreen")
     b = barplot(colSums(pA), xaxt='n', main="Total reads per sample", col=cols[smallSums+1])
@@ -102,4 +102,8 @@ legend('topleft', legend=nams, col=cols, pch=20, cex=1, pt.cex = 1.2)
 
 dev.off()
 
+genus <- div.genus[,-c(1,2)]
+genust <- t(genus)
+shann <- diversity(genust)
+write.table(shann, file= "shannon.diversity.txt", quote=F, sep='\t', row.names=F, col.names=F)
 
