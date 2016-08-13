@@ -14,7 +14,8 @@ heatcol <- rainbow(256,start=0.2,end=1)
 ## Read in, remove unnecessary columns, etc.
 
 source_level <- "genus"
-abund <- read.table(file.path("Data",paste("AnimalWasteWater","abundance","txt",sep=".")),sep="\t",header=T,as.is=T)
+#abund <- read.table(file.path("Data",paste("AnimalWasteWater","abundance","txt",sep=".")),sep="\t",header=T,as.is=T)
+abund <- read.table('./testData/postAbundance.abundance.txt', sep='\t', header=T, as.is=T)
 rownames(abund) <- paste(abund$Taxon_Name,abund$Level) 
 da <- dim(abund)
 taxon_name <- abund$Taxon_Name
@@ -22,7 +23,8 @@ level <- abund$Level
 abund$Taxon_Name <- NULL
 abund$Level <- NULL
 
-meta <- read.table("Metadata_table.txt",sep="\t",as.is=T, header=T)
+#meta <- read.table("Metadata_table.txt",sep="\t",as.is=T, header=T)
+meta <- read.table("./testData/Metadata_table.txt", sep='\t', header=T, as.is=T)
 meta$Join <- paste0("Sample_BC",meta$SAMPLE_ID)
 
 abund <- abund[,match(meta$Join,colnames(abund))] # resort column on meta
