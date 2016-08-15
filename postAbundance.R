@@ -5,6 +5,7 @@
 library(gplots)
 library(vegan)
 library(RColorBrewer)
+library(colorRamps)
 
 ## Read data and set it up for plotting
 pA = read.table("./well12A2016.abundance.txt", header=T, as.is=T, sep='\t', comment.char='')
@@ -20,7 +21,7 @@ pAprop = t(t(pAmat)/colSums(pAmat))
 rare.idx = rowSums(pAprop > .01) > (ncol(pAprop) * .01)
 
 # Figure 1 - Reads per sample, with samples < 10000 reads higlighted
-pdf(file="Data Summaries.pdf", width=8 + .7*ncol(pA), height=11)
+pdf(file="Data Summaries 2016.pdf", width=8 + .7*ncol(pA), height=11)
     smallSums <- colSums(pA) >= 10000
     cols <- c("yellow", "forestgreen")
     b = barplot(colSums(pA), xaxt='n', main="Total reads per sample", col=cols[smallSums+1])
@@ -37,10 +38,12 @@ cLevelTable = apply(pA, 2, function(x){tapply(x, FUN=sum, I=Level)})
 # Order table rows by classification level:
 cLevelTable = cLevelTable[order(match(rownames(cLevelTable), levels_order), decreasing=T),]
 # pdf(file="Reads_per_classification_level.pdf", width=8 + .1*ncol(pA), height=8)
-    c = barplot(cLevelTable, col=levels_colors[rownames(cLevelTable)], xaxt='n', main='Reads per classification level')
-    text(c, par("usr")[3], labels = colnames(pA), srt = 45, xpd = TRUE, cex=.6, adj=1)
-    legend('topleft', col=levels_colors[rev(rownames(cLevelTable))], legend=rev(rownames(cLevelTable)), pch=20, cex=1)
-
+    par(mfrow=c(1, 1), mar=c(5, 5, 4, 3))
+    #c = barplot(cLevelTable, col=levels_colors[rownames(cLevelTable)], xaxt='n', main='Reads per classification level', ylim = c(0,7000000))
+    c = barplot(try, col=levels_colors[rownames(try)], xaxt='n', main='Reads per classification level')
+    text(c, par("usr")[3], labels = colnames(try), srt = 45, xpd = TRUE, cex=.6, adj=1)
+    legend('topright', col=levels_colors[rev(rownames(cLevelTable))], legend=rev(rownames(cLevelTable)), pch=20, cex=1.2, ncol=1, bty="n")
+    
 taxa_info <- read.delim("./well12A2016.taxa_info.txt")
 Counts <- taxa_info$Total
 family <- as.data.frame(cbind(lapply(strsplit(as.character(taxa_info$Taxon_Name), ";"), "[",5), Counts))
@@ -66,11 +69,11 @@ genus.topRows <- genus.agg2[genus.agg2$Reads>10000,]
 
 # Figure 3 and 4 - Reads per taxonomic level, top genera > 1000 reads
 # pdf(file="Reads_per_FamilyLevel.pdf", width= 18, height=8)
-par(mar=c(11,4,4,0))
-f <- barplot(family.topRows$Reads, main = "Reads for each family > 5000", ylab="Number of Reads", col="firebrick", width=8 + .1*ncol(family.topRows))
+par(mar=c(11,3,4,0))
+f <- barplot(family.topRows$Reads, main = "Reads for each family > 5000, all samples", ylab="Number of Reads", col="firebrick", width=8 + .1*ncol(family.topRows))
 axis(side=1, at=f, labels=NA, lwd=0, lwd.ticks=1, pos=1, tck=-.009)
 text(f, par("usr")[3], labels = family.topRows$Names, srt = 45, xpd = TRUE, cex=.7, adj=1)
-genus.tops <- barplot(genus.topRows$Reads, main = "Top genera with reads > 10000", ylab="Number of Reads", col="darkslategray2")
+genus.tops <- barplot(genus.topRows$Reads, main = "Top genera with reads > 10000, all samples", ylab="Number of Reads", col="darkslategray2")
 axis(side=1, at=genus.tops, labels=NA, lwd=0, lwd.ticks=1, pos=1, tck=-.009)
 text(genus.tops, par("usr")[3], labels = genus.topRows$Names, srt = 45, xpd = TRUE, cex=.7, adj=1)
 
@@ -93,23 +96,23 @@ pAmat = as.matrix(pAg)
 rownames(pAmat) = div.genus$Taxon_Name
 pAprop = t(t(pAmat)/colSums(pAmat))
 
-# build a filter which keeps  bacteria which are at > 1% in 1% or more of samples:
+# build a filter which keeps bacteria which are at > 1% in 1% or more of samples:
 common.idx = rowSums(pAprop > .01) > (ncol(pAprop) * .01)
 
 div.genus.common = div.genus[common.idx,]
 div.genus.common = div.genus.common[order(div.genus.common$Taxon_Name, decreasing=F), ]
-genus.colors = rainbow(nrow(div.genus.common))
+genus.colors = primary.colors(nrow(div.genus.common))
 names(genus.colors) = div.genus.common$Taxon_Name
 dgc.mat = as.matrix(div.genus.common[,-c(1,2)])
 
 layout(mat=matrix(nrow=1, c(1,2)), widths=c(8,2))
 par(las=1)
-par(mar=c(8,4,1,1))
+par(mar=c(8,4.5,1,1))
 m <- barplot(dgc.mat, col=genus.colors, xaxt='n', main='Genera in each sample', width=8 + .1*ncol(dgc.mat))
 text(m, par("usr")[3], labels = colnames(dgc.mat), srt = 45, xpd = TRUE, cex=.7, adj=1)
 par(mar=c(.1,.1,.1,.1))
 plot(NA, xaxt='n', yaxt='n', ylim=c(-1,1), xlim=c(-1,1), xlab='', ylab='')
-legend('topleft', legend=names(genus.colors), col=genus.colors, pch=20, cex=.7, pt.cex = 1)
+legend('topleft', legend=names(genus.colors), col=genus.colors, pch=20, cex=.75, pt.cex = 1)
 
 dev.off()
 
@@ -117,4 +120,4 @@ dev.off()
 genus <- div.genus[,-c(1,2)]
 genust <- t(genus)
 shann <- diversity(genust)
-write.table(shann, file= "shannon.diversity.txt", quote=F, sep='\t', row.names=F, col.names=F)
+write.table(shann, file= "shannon.diversity2016.txt", quote=F, sep='\t', row.names=T, col.names=F)
