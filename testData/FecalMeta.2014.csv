@@ -1,156 +1,156 @@
-Taxon_Name	Treatment	Tissue
-1MB_8	1	none
-1MB_Cec	1	cec
-1MB_Col	1	col
-1MN_8	1	none
-1MR_Cec	1	cec
-1MR_Col	1	col
-1MR_Stom	1	stom
-2MB_8	2	none
-2MN_8	2	none
-2MN_Cec	2	cec
-2MN_Col	2	col
-2MR_8	2	none
-2MR_Cec	2	cec
-2MR_Col	2	col
-3MB_8	1	none
-3MB_Cec	1	cec
-3MB_Col	1	col
-3MB_Duo	1	duo
-3MN_8	1	none
-3MN_Cec_soup	1	cec
-3MR_8	1	none
-3MR_Cec	1	cec
-3MR_Col	1	col
-41MN_6	1	none
-41MN_Cec	1	cec
-41MN_Col	1	col
-41MN_Stom	1	stom
-42MB_Cec	2	cec
-42MB_Col	2	col
-42MB_Duo	2	duo
-42MB_Stom	2	stom
-43MB_Stom	1	stom
-45FB_6wk	1	none
-4MB_8	2	none
-4MB_Cec	2	cec
-4MB_Col	2	col
-4MB_Col_cont	2	col
-4MB_Duo	2	duo
-4MN_8	2	none
-4MN_8w	2	none
-4MN_Cec	2	cec
-4MN_Col	2	col
-4MN_Stom	2	stom
-4MR_8	2	none
-5FB_8	1	none
-5FB_Cec	1	cec
-5FB_Col	1	col
-5FN_8	1	none
-5FR_8	1	none
-5FR_Cec	1	cec
-5FR_Col	1	col
-5FR_Stom	1	stom
-6FR_8	2	none
-6FR_Cec	2	cec
-6FR_Col	2	col
-6FR_Stom	2	stom
-71MB_0	1	none
-71MB_12	1	none
-71MB_16	1	none
-71MB_1_	1	none
-71MB_2	1	none
-71MB_20	1	none
-71MB_4	1	none
-71MB_8	1	none
-71MB_Cec	1	cec
-71MB_Col	1	col
-71MB_Stom	1	stom
-71MN_0	1	none
-71MN_12	1	none
-71MN_16	1	none
-71MN_1_	1	none
-71MN_2	1	none
-71MN_20	1	none
-71MN_4	1	none
-71MN_8	1	none
-71MN_Cec	1	cec
-71MN_Col	1	col
-71MN_Duo	1	duo
-71MN_Stom	1	stom
-71MR_0	1	none
-71MR_12	1	none
-71MR_16	1	none
-71MR_1_	1	none
-71MR_2	1	none
-71MR_20	1	none
-71MR_4	1	none
-71MR_8	1	none
-71MR_Cec	1	cec
-72MB_0	2	none
-72MB_12	2	none
-72MB_16	2	none
-72MB_1_	2	none
-72MB_20	2	none
-72MB_4	2	none
-72MB_8	2	none
-72MB_Cec	2	cec
-72MB_Col	2	col
-72MB_Duo	2	duo
-72MB_Stom	2	stom
-72MG_0	2	none
-72MG_1	2	none
-72MG_12	2	none
-72MG_16	2	none
-72MG_2	2	none
-72MG_20	2	none
-72MG_4	2	none
-72MG_8	2	none
-72MG_Cec	2	cec
-72MN_0	2	none
-72MN_12	2	none
-72MN_16	2	none
-72MN_1_	2	none
-72MN_2	2	none
-72MN_20	2	none
-72MN_4	2	none
-72MN_8	2	none
-72MR_0	2	none
-72MR_1	2	none
-72MR_12	2	none
-72MR_16	2	none
-72MR_2	2	none
-72MR_20	2	none
-72MR_4	2	none
-72MR_8	2	none
-72MR_Col	2	col
-72MR_Duo	2	duo
-72MR_Stom	2	stom
-75MR_8	1	none
-76MB_8	2	none
-76MN_8	2	none
-76MR_8	2	none
-76MR_8w	2	none
-77FB_8	1	none
-77FB_8w	1	none
-77FN_8	1	none
-77FN_8w	1	none
-77FR_8	1	none
-78FN_8	2	none
-78FR_8	2	none
-7FN_8	1	none
-7FN_Cec	1	cec
-7FN_Col	1	col
-7FN_Duo	1	duo
-7FN_Stom	1	stom
-7FR_8	1	none
-7FR_8w	1	none
-7FR_Col	1	col
-7FR_Duo	1	duo
-7FR_Stom	1	stom
-8FB_8	2	none
-8FB_Cec	2	cec
-8FB_Stom	2	stom
-8FR_8	2	none
-8FR_Cec	2	cec
-8FR_Cec_soup	2	cec
+Sample_Name,Treatment,Tissue
+1MB_8,normal,gut
+1MB_Cec,normal,cec
+1MB_Col,normal,col
+1MN_8,normal,gut
+1MR_Cec,normal,cec
+1MR_Col,normal,col
+1MR_Stom,normal,stom
+2MB_8,highFat,gut
+2MN_8,highFat,gut
+2MN_Cec,highFat,cec
+2MN_Col,highFat,col
+2MR_8,highFat,gut
+2MR_Cec,highFat,cec
+2MR_Col,highFat,col
+3MB_8,normal,gut
+3MB_Cec,normal,cec
+3MB_Col,normal,col
+3MB_Duo,normal,duo
+3MN_8,normal,gut
+3MN_Cec_soup,normal,cec
+3MR_8,normal,gut
+3MR_Cec,normal,cec
+3MR_Col,normal,col
+41MN_6,normal,gut
+41MN_Cec,normal,cec
+41MN_Col,normal,col
+41MN_Stom,normal,stom
+42MB_Cec,highFat,cec
+42MB_Col,highFat,col
+42MB_Duo,highFat,duo
+42MB_Stom,highFat,stom
+43MB_Stom,normal,stom
+45FB_6wk,normal,gut
+4MB_8,highFat,gut
+4MB_Cec,highFat,cec
+4MB_Col,highFat,col
+4MB_Col_cont,highFat,col
+4MB_Duo,highFat,duo
+4MN_8,highFat,gut
+4MN_8w,highFat,gut
+4MN_Cec,highFat,cec
+4MN_Col,highFat,col
+4MN_Stom,highFat,stom
+4MR_8,highFat,gut
+5FB_8,normal,gut
+5FB_Cec,normal,cec
+5FB_Col,normal,col
+5FN_8,normal,gut
+5FR_8,normal,gut
+5FR_Cec,normal,cec
+5FR_Col,normal,col
+5FR_Stom,normal,stom
+6FR_8,highFat,gut
+6FR_Cec,highFat,cec
+6FR_Col,highFat,col
+6FR_Stom,highFat,stom
+71MB_0,normal,gut
+71MB_12,normal,gut
+71MB_16,normal,gut
+71MB_1_,normal,gut
+71MB_2,normal,gut
+71MB_20,normal,gut
+71MB_4,normal,gut
+71MB_8,normal,gut
+71MB_Cec,normal,cec
+71MB_Col,normal,col
+71MB_Stom,normal,stom
+71MN_0,normal,gut
+71MN_12,normal,gut
+71MN_16,normal,gut
+71MN_1_,normal,gut
+71MN_2,normal,gut
+71MN_20,normal,gut
+71MN_4,normal,gut
+71MN_8,normal,gut
+71MN_Cec,normal,cec
+71MN_Col,normal,col
+71MN_Duo,normal,duo
+71MN_Stom,normal,stom
+71MR_0,normal,gut
+71MR_12,normal,gut
+71MR_16,normal,gut
+71MR_1_,normal,gut
+71MR_2,normal,gut
+71MR_20,normal,gut
+71MR_4,normal,gut
+71MR_8,normal,gut
+71MR_Cec,normal,cec
+72MB_0,highFat,gut
+72MB_12,highFat,gut
+72MB_16,highFat,gut
+72MB_1_,highFat,gut
+72MB_20,highFat,gut
+72MB_4,highFat,gut
+72MB_8,highFat,gut
+72MB_Cec,highFat,cec
+72MB_Col,highFat,col
+72MB_Duo,highFat,duo
+72MB_Stom,highFat,stom
+72MG_0,highFat,gut
+72MG_1,highFat,gut
+72MG_12,highFat,gut
+72MG_16,highFat,gut
+72MG_2,highFat,gut
+72MG_20,highFat,gut
+72MG_4,highFat,gut
+72MG_8,highFat,gut
+72MG_Cec,highFat,cec
+72MN_0,highFat,gut
+72MN_12,highFat,gut
+72MN_16,highFat,gut
+72MN_1_,highFat,gut
+72MN_2,highFat,gut
+72MN_20,highFat,gut
+72MN_4,highFat,gut
+72MN_8,highFat,gut
+72MR_0,highFat,gut
+72MR_1,highFat,gut
+72MR_12,highFat,gut
+72MR_16,highFat,gut
+72MR_2,highFat,gut
+72MR_20,highFat,gut
+72MR_4,highFat,gut
+72MR_8,highFat,gut
+72MR_Col,highFat,col
+72MR_Duo,highFat,duo
+72MR_Stom,highFat,stom
+75MR_8,normal,gut
+76MB_8,highFat,gut
+76MN_8,highFat,gut
+76MR_8,highFat,gut
+76MR_8w,highFat,gut
+77FB_8,normal,gut
+77FB_8w,normal,gut
+77FN_8,normal,gut
+77FN_8w,normal,gut
+77FR_8,normal,gut
+78FN_8,highFat,gut
+78FR_8,highFat,gut
+7FN_8,normal,gut
+7FN_Cec,normal,cec
+7FN_Col,normal,col
+7FN_Duo,normal,duo
+7FN_Stom,normal,stom
+7FR_8,normal,gut
+7FR_8w,normal,gut
+7FR_Col,normal,col
+7FR_Duo,normal,duo
+7FR_Stom,normal,stom
+8FB_8,highFat,gut
+8FB_Cec,highFat,cec
+8FB_Stom,highFat,stom
+8FR_8,highFat,gut
+8FR_Cec,highFat,cec
+8FR_Cec_soup,highFat,cec
