@@ -39,8 +39,8 @@ cLevelTable = apply(pA, 2, function(x){tapply(x, FUN=sum, I=Level)})
 cLevelTable = cLevelTable[order(match(rownames(cLevelTable), levels_order), decreasing=T),]
 # pdf(file="Reads_per_classification_level.pdf", width=8 + .1*ncol(pA), height=8)
     par(mfrow=c(1, 1), mar=c(5, 5, 4, 3))
-    #c = barplot(cLevelTable, col=levels_colors[rownames(cLevelTable)], xaxt='n', main='Reads per classification level', ylim = c(0,7000000))
-    c = barplot(try, col=levels_colors[rownames(try)], xaxt='n', main='Reads per classification level')
+    c = barplot(cLevelTable, col=levels_colors[rownames(cLevelTable)], xaxt='n', main='Reads per classification level', ylim = c(0,3000000))
+    #c = barplot(try, col=levels_colors[rownames(try)], xaxt='n', main='Reads per classification level')
     text(c, par("usr")[3], labels = colnames(try), srt = 45, xpd = TRUE, cex=.6, adj=1)
     legend('topright', col=levels_colors[rev(rownames(cLevelTable))], legend=rev(rownames(cLevelTable)), pch=20, cex=1.2, ncol=1, bty="n")
     
@@ -112,7 +112,7 @@ m <- barplot(dgc.mat, col=genus.colors, xaxt='n', main='Genera in each sample', 
 text(m, par("usr")[3], labels = colnames(dgc.mat), srt = 45, xpd = TRUE, cex=.7, adj=1)
 par(mar=c(.1,.1,.1,.1))
 plot(NA, xaxt='n', yaxt='n', ylim=c(-1,1), xlim=c(-1,1), xlab='', ylab='')
-legend('topleft', legend=names(genus.colors), col=genus.colors, pch=20, cex=.75, pt.cex = 1)
+legend('topleft', legend=names(genus.colors), col=genus.colors, pch=20, cex=.65, pt.cex = 1)
 
 dev.off()
 
